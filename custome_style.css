@@ -1,0 +1,56 @@
+.img_header {
+
+	height:30%;
+	width: 100%;
+
+}
+.mid_header{
+	height:30%;
+}
+.main_left{
+	height:auto;
+}
+.main_body{
+	height:auto;
+}
+
+.footer{
+	height: auto;
+}
+
+.input{
+	margin-top: 30px;
+	padding-top: 30px;
+	border:2px solid #4ea0d8;
+}
+.carsoul{
+	padding: 50px;
+	/*height: 30%;*/
+}
+.menu ul {
+    list-style-type: none;
+    margin-top: 50px;
+    margin-right: 50px;
+    padding: 0;
+}
+.menu li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color :#33b5e5;
+    color: #ffffff;
+    border-radius:15px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.menu li:hover {
+    background-color: #0099cc;
+}
+
+.footer ul{
+	padding: 50px;
+}
+#res{
+	width: 100%;
+}
+.pos{
+
+}

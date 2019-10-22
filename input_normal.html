@@ -1,0 +1,138 @@
+<html> 
+   <head> 
+      <title>Blood Bank Web Site</title> 
+      <meta name="viewport" content="width=device-width, initialscale=1.0"> 
+      <!-- Bootstrap --> 
+      <link href="css/bootstrap.css" rel="stylesheet"> 
+      <link href="custome_style.css" rel="stylesheet"> 
+	  <script src="js/jquery.js"></script>
+	  <script src="js/bootstrap.js"></script>
+	  <style>
+	  
+	  </style>
+    <script language="javascript" type="text/javascript"> 
+
+    </script>
+	  </head>
+	  <body>
+
+
+<div class="container-fluid">
+  <div class="row"> <nav class="navbar navbar-inverse" style="margin-bottom:0px;">
+ 
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Page 1</a></li>
+        <li><a href="#">Page 2</a></li>
+        <li><a href="#">Page 3</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  
+</nav>
+</div>
+  <div class="row" style="background-color:lavender;">
+    <div class="col-sm-12 col-md-6 col-lg-2 row" style="margin:0px;padding:0px;" > <img class="img-responsive img_header" src="web_images/img104.jpg" alt="Chania"> </div>
+    <div class="col-sm-12 col-md-6 col-lg-8 mid_header" style="margin:0px;padding:0px;"></div>
+    <div class="col-sm-12 col-md-12 col-lg-2 row" style="margin:0px;padding:0px;"><img class="img-responsive img_header" src="web_images/img104.jpg" alt="Chania"></div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 col-md-3 col-lg-3 main_left" style="margin:0px;padding:0px;">.col-xs-6 .col-sm-4</div>
+    <div class="col-sm-6 col-md-9 col-lg-9 main_body" style="margin:0px;padding:0px;">
+      <div class=" col-sm-12 col-md-6 col-lg-6 row input">
+  <form class="form-horizontal" role="form" method="GET" action="catagory_upload_normal.php">
+    <div class="form-group ">
+    <label class="col-sm-12 col-md-3 col-lg-3 control-label" for="pid">Person Id</label>
+    <div class="col-sm-12 col-md-9 col-lg-9 ">
+      <input class="form-control" type="text" name="pers_id">
+    </div>
+  </div>
+  <div class="form-group ">
+    <label class="col-sm-12 col-md-3 col-lg-3 control-label" for="fn">First Name</label>
+    <div class="col-sm-12 col-md-9 col-lg-9 ">
+      <input class="form-control" type="text" name="f_name">
+    </div>
+  </div>
+  <div class="form-group ">
+    <label class="col-sm-12 col-md-3 col-lg-3  control-label" for="ln">Last Name</label>
+    <div class="col-sm-12 col-md-9 col-lg-9  ">
+      <input class="form-control" type="text" name="l_name">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-12 col-md-3 col-lg-3  control-label" for="sm">Sport</label>
+    <div class="col-sm-12 col-md-9 col-lg-9 ">
+       <label class="checkbox-inline"><input type="checkbox" value="Swiming" name="sw">Swiming</label>
+<label class="checkbox-inline"><input type="checkbox" value="Foot Ball" name="fb" >Foot Ball</label>
+<label class="checkbox-inline"><input type="checkbox" value="Cycle" name="cy">Cycle</label>
+    </div>
+  </div>
+
+    <div class="form-group">
+    <label class="col-sm-12 col-md-3 col-lg-3  control-label" for="sm">Gender</label>
+    <div class="col-sm-12 col-md-9 col-lg-9 ">
+<label class="radio-inline"><input type="radio" name="gen" id="gen" value="M">Male</label>
+<label class="radio-inline"><input type="radio" name="gen" id="gen" value="F">Female</label> 
+    </div>
+  </div>
+
+    <div class="form-group">
+    <label class="col-sm-12 col-md-3 col-lg-3  control-label" for="sm">Age</label>
+    <div class="col-sm-12 col-md-9 col-lg-9 ">
+ <input class="form-control" type="text" name="age"> 
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <label class="col-sm-12 col-md-3 col-lg-3  control-label" for="sm">Department</label>
+    <div class="col-sm-12 col-md-9 col-lg-9 ">
+        <select class="form-control"  name="dept_name">
+    <option>Computer</option>
+    <option>Electrical</option>
+    <option>Mechanical</option>
+    <option>Civil</option>
+  </select>
+    </div>
+  </div>
+
+  <div class="form-group">
+     <label class="col-sm-12 col-md-12 col-lg-12  control-label" id="chk"></label> 
+     </div>
+
+   <div class="form-group">
+     <label class="col-sm-12 col-md-3 col-lg-3  control-label" for="sm"></label> 
+    <div class="col-sm-12 col-md-9 col-lg-9 ">
+    <button type="submit" class="btn btn-primary" id="add"  >ADD</button>
+    <button type="button" class="btn btn-danger" id="cl" >ClEAR</button>
+    </div>
+  </div>
+
+
+</form>
+      </div>
+    </div> 
+  </div> 
+  <div class="row">
+  	<div class="col-sm-12 col-md-12 col-lg-12 footer" style="margin:0px;padding:0px;">footer
+  		footer
+  		footer
+  	</div>
+  </div>
+</div>
+
+	  </body>
+	  </html>

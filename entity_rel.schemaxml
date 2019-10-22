@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemadesigner version="6.5">
+<source>
+<database charset="utf8" collation="utf8_general_ci">b_l_bank</database>
+</source>
+<canvas zoom="100">
+<tables>
+<table name="spl_ctg" view="colnames">
+<left>122</left>
+<top>84</top>
+<width>125</width>
+<height>112</height>
+<sql_create_table>CREATE TABLE `spl_ctg` (
+  `spl_ctg_id` varchar(20) NOT NULL,
+  `spl_ctg_name` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`spl_ctg_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="spl_tbl" view="colnames">
+<left>424</left>
+<top>5</top>
+<width>130</width>
+<height>129</height>
+<sql_create_table>CREATE TABLE `spl_tbl` (
+  `packet_id` varchar(20) NOT NULL,
+  `donation_id` varchar(50) DEFAULT NULL,
+  `spl_ctg_id` varchar(20) DEFAULT 'Null',
+  `center_id` varchar(20) DEFAULT NULL,
+  `date_created` date DEFAULT NULL,
+  `date_taken` date DEFAULT NULL,
+  `status` varchar(5) DEFAULT NULL,
+  `descr` text,
+  PRIMARY KEY (`packet_id`),
+  KEY `FK_spl_tbl` (`center_id`),
+  KEY `FK_spl_tbl_1` (`spl_ctg_id`),
+  KEY `FK_spl_tbl_don_1` (`donation_id`),
+  CONSTRAINT `FK_spl_tbl` FOREIGN KEY (`center_id`) REFERENCES `center` (`center_id`),
+  CONSTRAINT `FK_spl_tbl_1` FOREIGN KEY (`spl_ctg_id`) REFERENCES `spl_ctg` (`spl_ctg_id`),
+  CONSTRAINT `FK_spl_tbl_don_1` FOREIGN KEY (`donation_id`) REFERENCES `donation` (`donation_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="center" view="colnames">
+<left>462</left>
+<top>267</top>
+<width>121</width>
+<height>112</height>
+<sql_create_table>CREATE TABLE `center` (
+  `center_id` varchar(20) NOT NULL,
+  `center_name` varchar(150) DEFAULT NULL,
+  PRIMARY KEY (`center_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="donation" view="colnames">
+<left>289</left>
+<top>218</top>
+<width>112</width>
+<height>112</height>
+<sql_create_table>CREATE TABLE `donation` (
+  `donation_id` varchar(20) NOT NULL,
+  `desc` text,
+  UNIQUE KEY `NewIndex1` (`donation_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="donor_account" view="colnames">
+<left>126</left>
+<top>284</top>
+<width>112</width>
+<height>146</height>
+<sql_create_table>CREATE TABLE `donor_account` (
+  `donation_id` varchar(50) NOT NULL,
+  `username` varchar(50) DEFAULT NULL,
+  `password` varchar(50) DEFAULT NULL,
+  `role` varchar(20) DEFAULT NULL,
+  UNIQUE KEY `NewIndex1` (`donation_id`),
+  KEY `FK_donor_accountn` (`role`),
+  CONSTRAINT `FK_donor_account_11` FOREIGN KEY (`donation_id`) REFERENCES `donation` (`donation_id`),
+  CONSTRAINT `FK_donor_account` FOREIGN KEY (`role`) REFERENCES `roles` (`role_id`),
+  CONSTRAINT `FK_donor_account_1` FOREIGN KEY (`donation_id`) REFERENCES `donation` (`donation_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="roles" view="colnames">
+<left>713</left>
+<top>229</top>
+<width>107</width>
+<height>112</height>
+<sql_create_table>CREATE TABLE `roles` (
+  `role_id` varchar(10) NOT NULL,
+  `role_name` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`role_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+</tables>
+</canvas>
+</schemadesigner>
